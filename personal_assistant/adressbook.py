@@ -5,11 +5,14 @@ import pickle
 import re
 
 
+class Abstract(ABC):
+
+    @abstractmethod
+    def value(self, data):
+        pass
 
 
-
-
-class Field():
+class Field(Abstract):
     def __init__(self, value) -> None:
         self._value = value
 
